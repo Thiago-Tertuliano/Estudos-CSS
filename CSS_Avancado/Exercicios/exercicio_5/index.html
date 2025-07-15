@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Animações CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader">
+            <div class="loader__spinner"></div>
+            <div class="loader__text">Carregando...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__title">
+                <i class="fas fa-magic"></i>
+                Animações CSS
+            </h1>
+            <nav class="nav">
+                <a href="#home" class="nav__link">Início</a>
+                <a href="#features" class="nav__link">Recursos</a>
+                <a href="#gallery" class="nav__link">Galeria</a>
+                <a href="#contact" class="nav__link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero__content">
+            <h2 class="hero__title">Bem-vindo ao Mundo das Animações</h2>
+            <p class="hero__description">
+                Explore o poder das animações CSS e descubra como criar experiências 
+                interativas e envolventes para seus usuários.
+            </p>
+            <div class="hero__buttons">
+                <button class="btn btn--primary">
+                    <i class="fas fa-play"></i>
+                    Começar
+                </button>
+                <button class="btn btn--secondary">
+                    <i class="fas fa-info-circle"></i>
+                    Saiba Mais
+                </button>
+            </div>
+        </div>
+        <div class="hero__visual">
+            <div class="floating-element floating-element--1">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="floating-element floating-element--2">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="floating-element floating-element--3">
+                <i class="fas fa-diamond"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h3 class="section-title">Recursos Principais</h3>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4 class="feature-card__title">Transições Suaves</h4>
+                    <p class="feature-card__description">
+                        Crie transições elegantes entre estados com CSS transitions.
+                    </p>
+                    <div class="feature-card__demo">
+                        <div class="demo-button">Hover Me</div>
+                    </div>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h4 class="feature-card__title">Keyframes Avançados</h4>
+                    <p class="feature-card__description">
+                        Animações complexas com controle total usando @keyframes.
+                    </p>
+                    <div class="feature-card__demo">
+                        <div class="demo-loader"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="feature-card__title">Responsivo</h4>
+                    <p class="feature-card__description">
+                        Animações que se adaptam a todos os dispositivos.
+                    </p>
+                    <div class="feature-card__demo">
+                        <div class="demo-responsive">
+                            <div class="demo-responsive__bar"></div>
+                            <div class="demo-responsive__bar"></div>
+                            <div class="demo-responsive__bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h3 class="section-title">Galeria de Animações</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <div class="gallery-item__content">
+                        <i class="fas fa-bounce fa-bell"></i>
+                        <h4>Bounce Effect</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <div class="gallery-item__content">
+                        <i class="fas fa-pulse fa-heart"></i>
+                        <h4>Pulse Effect</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <div class="gallery-item__content">
+                        <i class="fas fa-shake fa-star"></i>
+                        <h4>Shake Effect</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <div class="gallery-item__content">
+                        <i class="fas fa-spin fa-cog"></i>
+                        <h4>Spin Effect</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <div class="gallery-item__content">
+                        <i class="fas fa-flip fa-image"></i>
+                        <h4>Flip Effect</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <div class="gallery-item__content">
+                        <i class="fas fa-beat fa-music"></i>
+                        <h4>Beat Effect</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3 class="section-title">Entre em Contato</h3>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-info__item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@animacoes.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form animate-on-scroll">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    &copy; 2024 Animações CSS. Criado com ❤️ e CSS puro.
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
