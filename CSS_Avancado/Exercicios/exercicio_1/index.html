@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page do Produto X - Soluções inovadoras para seu dia a dia">
+  <title>Produto X - Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <div class="container header__container">
+      <h1 class="header__logo">Produto X</h1>
+      <nav class="header__nav" role="navigation" aria-label="Menu principal">
+        <a href="#sobre" class="header__nav-link">Sobre</a>
+        <a href="#vantagens" class="header__nav-link">Vantagens</a>
+        <a href="#contato" class="header__nav-link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__texto">
+            <h2 id="hero-title" class="hero__titulo">Transforme sua experiência com o Produto X</h2>
+            <p class="hero__descricao">Simples. Rápido. Inovador. Descubra como nossa solução pode revolucionar seu dia a dia.</p>
+            <a href="#contato" class="hero__botao" aria-label="Saiba mais sobre o produto">Quero saber mais</a>
+          </div>
+          <div class="hero__imagem">
+            <img src="https://via.placeholder.com/400x300" alt="Imagem ilustrativa do Produto X em uso" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre secao" aria-labelledby="sobre-title">
+      <div class="container">
+        <h2 id="sobre-title" class="secao__titulo">Sobre o Produto</h2>
+        <p class="secao__descricao">O Produto X foi criado para facilitar sua vida com soluções modernas e acessíveis. Nossa missão é simplificar processos complexos e tornar sua experiência mais eficiente.</p>
+      </div>
+    </section>
+
+    <section id="vantagens" class="vantagens secao" aria-labelledby="vantagens-title">
+      <div class="container">
+        <h2 id="vantagens-title" class="secao__titulo">Nossas Vantagens</h2>
+        <div class="vantagens__cards" role="list">
+          <div class="vantagens__card" role="listitem">
+            <h3 class="vantagens__card-titulo">🚀 Velocidade</h3>
+            <p class="vantagens__card-descricao">Resposta rápida e sem complicações. Processos otimizados para máxima eficiência.</p>
+          </div>
+          <div class="vantagens__card" role="listitem">
+            <h3 class="vantagens__card-titulo">🎯 Facilidade</h3>
+            <p class="vantagens__card-descricao">Interface intuitiva e direta ao ponto. Aprenda a usar em minutos.</p>
+          </div>
+          <div class="vantagens__card" role="listitem">
+            <h3 class="vantagens__card-titulo">💬 Suporte</h3>
+            <p class="vantagens__card-descricao">Estamos com você em cada passo. Suporte 24/7 sempre disponível.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato secao" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title" class="secao__titulo">Entre em Contato</h2>
+        <form class="contato__formulario" role="form" aria-labelledby="contato-title">
+          <div class="contato__grupo">
+            <label for="nome" class="contato__label">Nome:</label>
+            <input type="text" id="nome" name="nome" class="contato__input" required aria-required="true">
+          </div>
+          
+          <div class="contato__grupo">
+            <label for="email" class="contato__label">Email:</label>
+            <input type="email" id="email" name="email" class="contato__input" required aria-required="true">
+          </div>
+          
+          <div class="contato__grupo">
+            <label for="mensagem" class="contato__label">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" class="contato__textarea" rows="4" required aria-required="true"></textarea>
+          </div>
+          
+          <button type="submit" class="contato__botao">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__container">
+      <p class="footer__copyright">&copy; 2025 Produto X. Todos os direitos reservados.</p>
+      <div class="footer__redes" role="navigation" aria-label="Redes sociais">
+        <a href="#" class="footer__rede-link" aria-label="Facebook">Facebook</a>
+        <a href="#" class="footer__rede-link" aria-label="Twitter">Twitter</a>
+        <a href="#" class="footer__rede-link" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
