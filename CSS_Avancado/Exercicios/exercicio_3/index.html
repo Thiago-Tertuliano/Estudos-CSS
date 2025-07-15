@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard responsivo - Exercício CSS Grid + Media Queries">
+  <title>Dashboard Responsivo - CSS Grid Exercise</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Header -->
+    <header class="dashboard__header" role="banner">
+      <div class="dashboard__header-content">
+        <div class="dashboard__logo">
+          <i class="fas fa-chart-line"></i>
+          <h1>Dashboard Responsivo</h1>
+        </div>
+        <nav class="dashboard__nav" role="navigation" aria-label="Navegação principal">
+          <a href="#home" class="dashboard__nav-link">
+            <i class="fas fa-home"></i>
+            <span class="nav-text">Home</span>
+          </a>
+          <a href="#dashboard" class="dashboard__nav-link">
+            <i class="fas fa-tachometer-alt"></i>
+            <span class="nav-text">Dashboard</span>
+          </a>
+          <a href="#settings" class="dashboard__nav-link">
+            <i class="fas fa-cog"></i>
+            <span class="nav-text">Configurações</span>
+          </a>
+        </nav>
+        <div class="dashboard__user">
+          <i class="fas fa-user-circle"></i>
+          <span class="user-text">Admin</span>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Sidebar -->
+    <aside class="dashboard__sidebar" role="complementary" aria-label="Menu lateral">
+      <h3 class="dashboard__sidebar-title">
+        <i class="fas fa-bars"></i>
+        Menu Principal
+      </h3>
+      <nav class="dashboard__sidebar-nav" role="navigation" aria-label="Menu lateral">
+        <ul class="dashboard__sidebar-list">
+          <li>
+            <a href="#analytics" class="dashboard__sidebar-link">
+              <i class="fas fa-chart-bar"></i>
+              <span>Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#users" class="dashboard__sidebar-link">
+              <i class="fas fa-users"></i>
+              <span>Usuários</span>
+            </a>
+          </li>
+          <li>
+            <a href="#reports" class="dashboard__sidebar-link">
+              <i class="fas fa-file-alt"></i>
+              <span>Relatórios</span>
+            </a>
+          </li>
+          <li>
+            <a href="#products" class="dashboard__sidebar-link">
+              <i class="fas fa-box"></i>
+              <span>Produtos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#orders" class="dashboard__sidebar-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Pedidos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#support" class="dashboard__sidebar-link">
+              <i class="fas fa-headset"></i>
+              <span>Suporte</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="dashboard__main" role="main">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__container">
+          <div class="hero__content">
+            <h2 id="hero-title" class="hero__title">Bem-vindo ao Dashboard</h2>
+            <p class="hero__description">Gerencie seus dados de forma eficiente e visualize métricas importantes em tempo real.</p>
+            <button class="hero__button">
+              <i class="fas fa-rocket"></i>
+              Começar Agora
+            </button>
+          </div>
+          <div class="hero__image">
+            <img src="https://via.placeholder.com/400x300" alt="Dashboard ilustrativo" loading="lazy">
+          </div>
+        </div>
+      </section>
+      
+      <!-- Cards Section -->
+      <section class="dashboard__cards-section" aria-labelledby="cards-title">
+        <h3 id="cards-title" class="dashboard__section-title">Métricas Principais</h3>
+        <div class="dashboard__cards">
+          <div class="card card--primary">
+            <div class="card__icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="card__content">
+              <h4 class="card__title">Usuários Ativos</h4>
+              <p class="card__value">1,234</p>
+              <p class="card__change card__change--positive">
+                <i class="fas fa-arrow-up"></i>
+                +12.5%
+              </p>
+            </div>
+          </div>
+          
+          <div class="card card--success">
+            <div class="card__icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card__content">
+              <h4 class="card__title">Receita</h4>
+              <p class="card__value">R$ 45,678</p>
+              <p class="card__change card__change--positive">
+                <i class="fas fa-arrow-up"></i>
+                +8.3%
+              </p>
+            </div>
+          </div>
+          
+          <div class="card card--warning">
+            <div class="card__icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="card__content">
+              <h4 class="card__title">Pedidos</h4>
+              <p class="card__value">567</p>
+              <p class="card__change card__change--negative">
+                <i class="fas fa-arrow-down"></i>
+                -2.1%
+              </p>
+            </div>
+          </div>
+          
+          <div class="card card--info">
+            <div class="card__icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="card__content">
+              <h4 class="card__title">Visualizações</h4>
+              <p class="card__value">89,123</p>
+              <p class="card__change card__change--positive">
+                <i class="fas fa-arrow-up"></i>
+                +15.7%
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Charts Section -->
+      <section class="dashboard__charts-section" aria-labelledby="charts-title">
+        <h3 id="charts-title" class="dashboard__section-title">Gráficos e Análises</h3>
+        <div class="dashboard__charts">
+          <div class="chart-container">
+            <h4 class="chart__title">Vendas Mensais</h4>
+            <div class="chart__placeholder">
+              <i class="fas fa-chart-line"></i>
+              <p>Gráfico de Vendas</p>
+            </div>
+          </div>
+          
+          <div class="chart-container">
+            <h4 class="chart__title">Distribuição de Usuários</h4>
+            <div class="chart__placeholder">
+              <i class="fas fa-chart-pie"></i>
+              <p>Gráfico de Pizza</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <!-- Ads Sidebar -->
+    <aside class="dashboard__ads" role="complementary" aria-label="Anúncios">
+      <h3 class="dashboard__ads-title">
+        <i class="fas fa-ad"></i>
+        Anúncios
+      </h3>
+      
+      <div class="ad">
+        <div class="ad__content">
+          <h4 class="ad__title">Promoção Especial</h4>
+          <p class="ad__description">Desconto de 20% em todos os produtos premium</p>
+          <button class="ad__button">Ver Oferta</button>
+        </div>
+      </div>
+      
+      <div class="ad">
+        <div class="ad__content">
+          <h4 class="ad__title">Novo Produto</h4>
+          <p class="ad__description">Conheça nossa nova linha de produtos</p>
+          <button class="ad__button">Saiba Mais</button>
+        </div>
+      </div>
+      
+      <div class="ad">
+        <div class="ad__content">
+          <h4 class="ad__title">Suporte Premium</h4>
+          <p class="ad__description">Atendimento prioritário 24/7</p>
+          <button class="ad__button">Contratar</button>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Footer -->
+    <footer class="dashboard__footer" role="contentinfo">
+      <div class="dashboard__footer-content">
+        <p class="dashboard__footer-copyright">
+          &copy; 2025 Dashboard Responsivo. Todos os direitos reservados.
+        </p>
+        <div class="dashboard__footer-links">
+          <a href="#privacy" class="dashboard__footer-link">Privacidade</a>
+          <a href="#terms" class="dashboard__footer-link">Termos</a>
+          <a href="#help" class="dashboard__footer-link">Ajuda</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html> 
