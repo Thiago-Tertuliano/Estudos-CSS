@@ -1045,7 +1045,7 @@ body {
 
 .btn--primary {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+  color: white;
 }
 
 .btn--primary::before {
@@ -1061,7 +1061,7 @@ body {
 }
 
 .btn--primary:hover::before {
-    left: 0;
+  left: 0;
 }
 
 .btn--primary:hover {

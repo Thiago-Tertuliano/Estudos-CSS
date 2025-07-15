@@ -55,7 +55,7 @@ transition: propriedade duração timing-function delay;
   transition: background-color 0.3s ease, transform 0.2s ease;
   
   /* Todas as propriedades */
-  transition: all 0.3s ease;
+transition: all 0.3s ease;
   
   /* Com delay */
   transition: all 0.3s ease 0.1s;
