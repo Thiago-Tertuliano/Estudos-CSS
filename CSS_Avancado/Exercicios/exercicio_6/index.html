@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Pseudoelementos e Pseudoclasses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__title">
+                <i class="fas fa-magic"></i>
+                Pseudoelementos & Pseudoclasses
+            </h1>
+            <nav class="nav">
+                <a href="#form" class="nav__link">Formulário</a>
+                <a href="#list" class="nav__link">Lista</a>
+                <a href="#cards" class="nav__link">Cards</a>
+                <a href="#buttons" class="nav__link">Botões</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <h2 class="hero__title">Explorando CSS Avançado</h2>
+            <p class="hero__description">
+                Demonstração prática de pseudoelementos e pseudoclasses CSS para criar 
+                interfaces interativas e modernas.
+            </p>
+            <div class="hero__stats">
+                <div class="stat">
+                    <i class="fas fa-palette"></i>
+                    <span>Pseudoclasses</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-magic"></i>
+                    <span>Pseudoelementos</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-code"></i>
+                    <span>CSS Puro</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário Interativo -->
+    <section id="form" class="section">
+        <h2 class="section__title">Formulário Interativo</h2>
+        <div class="form-container">
+            <form class="form">
+                <div class="form__group">
+                    <label for="name" class="form__label">Nome Completo</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="name" class="form__input" placeholder="Digite seu nome" required>
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" class="form__input" placeholder="seu@email.com" required>
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label for="phone" class="form__label">Telefone</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phone" class="form__input" placeholder="(11) 99999-9999">
+                        <i class="fas fa-phone input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label">Preferências</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-custom">
+                            <input type="checkbox" id="newsletter">
+                            <span>Receber newsletter</span>
+                        </label>
+                        <label class="checkbox-custom">
+                            <input type="checkbox" id="notifications">
+                            <span>Notificações push</span>
+                        </label>
+                        <label class="checkbox-custom">
+                            <input type="checkbox" id="terms" required>
+                            <span>Concordo com os termos</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label for="message" class="form__label">Mensagem</label>
+                    <textarea id="message" class="form__textarea" placeholder="Digite sua mensagem..." rows="4"></textarea>
+                </div>
+
+                <div class="form__actions">
+                    <button type="submit" class="btn btn--primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar
+                    </button>
+                    <button type="reset" class="btn btn--secondary">
+                        <i class="fas fa-undo"></i>
+                        Limpar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Lista Estilizada -->
+    <section id="list" class="section">
+        <h2 class="section__title">Lista Interativa</h2>
+        <div class="list-container">
+            <ul class="lista">
+                <li class="lista__item">
+                    <i class="fas fa-star"></i>
+                    <span>Primeiro item da lista</span>
+                    <button class="lista__btn">Ação</button>
+                </li>
+                <li class="lista__item">
+                    <i class="fas fa-heart"></i>
+                    <span>Segundo item da lista</span>
+                    <button class="lista__btn">Ação</button>
+                </li>
+                <li class="lista__item">
+                    <i class="fas fa-diamond"></i>
+                    <span>Terceiro item da lista</span>
+                    <button class="lista__btn">Ação</button>
+                </li>
+                <li class="lista__item">
+                    <i class="fas fa-gem"></i>
+                    <span>Quarto item da lista</span>
+                    <button class="lista__btn">Ação</button>
+                </li>
+                <li class="lista__item">
+                    <i class="fas fa-crown"></i>
+                    <span>Quinto item da lista</span>
+                    <button class="lista__btn">Ação</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Cards Interativos -->
+    <section id="cards" class="section">
+        <h2 class="section__title">Cards Interativos</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card__header">
+                    <i class="fas fa-rocket card__icon"></i>
+                    <h3 class="card__title">Card 1</h3>
+                </div>
+                <p class="card__description">
+                    Este card demonstra o uso de pseudoelementos para criar efeitos visuais avançados.
+                </p>
+                <div class="card__actions">
+                    <button class="btn btn--primary">Ação Principal</button>
+                    <button class="btn btn--secondary">Ação Secundária</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__header">
+                    <i class="fas fa-magic card__icon"></i>
+                    <h3 class="card__title">Card 2</h3>
+                </div>
+                <p class="card__description">
+                    Hover effects e animações criadas com pseudoclasses e pseudoelementos.
+                </p>
+                <div class="card__actions">
+                    <button class="btn btn--primary">Ação Principal</button>
+                    <button class="btn btn--secondary">Ação Secundária</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__header">
+                    <i class="fas fa-sparkles card__icon"></i>
+                    <h3 class="card__title">Card 3</h3>
+                </div>
+                <p class="card__description">
+                    Efeitos de borda e sombra animados usando CSS puro.
+                </p>
+                <div class="card__actions">
+                    <button class="btn btn--primary">Ação Principal</button>
+                    <button class="btn btn--secondary">Ação Secundária</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botões Avançados -->
+    <section id="buttons" class="section">
+        <h2 class="section__title">Botões Avançados</h2>
+        <div class="buttons-container">
+            <div class="button-group">
+                <h3 class="button-group__title">Efeitos de Hover</h3>
+                <button class="btn btn--slide">Slide Effect</button>
+                <button class="btn btn--glow">Glow Effect</button>
+                <button class="btn btn--scale">Scale Effect</button>
+            </div>
+
+            <div class="button-group">
+                <h3 class="button-group__title">Estados Interativos</h3>
+                <button class="btn btn--primary">Normal</button>
+                <button class="btn btn--primary" disabled>Desabilitado</button>
+                <button class="btn btn--loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    Carregando
+                </button>
+            </div>
+
+            <div class="button-group">
+                <h3 class="button-group__title">Pseudoelementos</h3>
+                <button class="btn btn--before">Com ::before</button>
+                <button class="btn btn--after">Com ::after</button>
+                <button class="btn btn--both">Com ambos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Efeitos -->
+    <section class="section">
+        <h2 class="section__title">Galeria de Efeitos</h2>
+        <div class="effects-grid">
+            <div class="effect-item">
+                <div class="effect-item__icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Hover Effect</h4>
+                <p>Efeito ao passar o mouse</p>
+            </div>
+
+            <div class="effect-item">
+                <div class="effect-item__icon">
+                    <i class="fas fa-focus"></i>
+                </div>
+                <h4>Focus State</h4>
+                <p>Estado de foco</p>
+            </div>
+
+            <div class="effect-item">
+                <div class="effect-item__icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h4>Checked State</h4>
+                <p>Estado marcado</p>
+            </div>
+
+            <div class="effect-item">
+                <div class="effect-item__icon">
+                    <i class="fas fa-list-ol"></i>
+                </div>
+                <h4>Nth Child</h4>
+                <p>Seleção por posição</p>
+            </div>
+
+            <div class="effect-item">
+                <div class="effect-item__icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h4>::Before</h4>
+                <p>Conteúdo antes</p>
+            </div>
+
+            <div class="effect-item">
+                <div class="effect-item__icon">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <h4>::After</h4>
+                <p>Conteúdo depois</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">
+                &copy; 2024 Pseudoelementos & Pseudoclasses. Criado com CSS puro.
+            </p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="#" class="footer__link">
+                    <i class="fab fa-codepen"></i>
+                    CodePen
+                </a>
+                <a href="#" class="footer__link">
+                    <i class="fas fa-book"></i>
+                    Documentação
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
