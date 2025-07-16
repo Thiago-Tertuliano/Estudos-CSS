@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Listas, Botões e Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header com navegação -->
+        <header class="header">
+            <h1>🍔 Hamburgueria Delícia</h1>
+            <nav class="nav-menu">
+                <ul class="menu">
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#pedidos">Fazer Pedido</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Seção de cardápio -->
+        <section id="cardapio" class="cardapio-section">
+            <h2>🍽️ Nosso Cardápio</h2>
+            
+            <!-- Lista de produtos -->
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Hambúrguer" alt="Hambúrguer">
+                    <h3>Hambúrguer Clássico</h3>
+                    <p>Pão, carne, alface, tomate e queijo</p>
+                    <div class="preco">R$ 15,90</div>
+                    <button class="btn-primary">Adicionar ao Pedido</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Batata" alt="Batata Frita">
+                    <h3>Batata Frita</h3>
+                    <p>Porção generosa de batatas crocantes</p>
+                    <div class="preco">R$ 8,50</div>
+                    <button class="btn-secondary">Adicionar ao Pedido</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Refrigerante" alt="Refrigerante">
+                    <h3>Refrigerante</h3>
+                    <p>Lata 350ml - Coca-Cola, Sprite ou Fanta</p>
+                    <div class="preco">R$ 4,50</div>
+                    <button class="btn-outline">Adicionar ao Pedido</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de pedido -->
+        <section id="pedidos" class="pedido-section">
+            <h2>📝 Fazer Pedido</h2>
+            
+            <form class="formulario-pedido">
+                <div class="form-grupo">
+                    <label for="nome" class="required">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="telefone" class="required">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="endereco" class="required">Endereço de entrega</label>
+                    <textarea id="endereco" name="endereco" rows="3" placeholder="Rua, número, bairro, cidade..." required></textarea>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="2" placeholder="Alguma observação especial?"></textarea>
+                </div>
+
+                <div class="form-grupo">
+                    <label>Forma de pagamento</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="pagamento" value="dinheiro" checked>
+                            <span class="radio-custom"></span>
+                            Dinheiro
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="pagamento" value="cartao">
+                            <span class="radio-custom"></span>
+                            Cartão
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="pagamento" value="pix">
+                            <span class="radio-custom"></span>
+                            PIX
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-grupo">
+                    <button type="submit" class="btn-success">
+                        <span class="icon">📱</span>
+                        <span class="text">Fazer Pedido</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Seção de contato -->
+        <section id="contato" class="contato-section">
+            <h2>📞 Entre em Contato</h2>
+            
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <h3>Informações de Contato</h3>
+                    <ul class="lista-contato">
+                        <li>📞 (11) 9999-9999</li>
+                        <li>📧 contato@hamburgueria.com</li>
+                        <li>📍 Rua das Delícias, 123 - Centro</li>
+                        <li>⏰ Seg-Sex: 18h às 23h | Sáb-Dom: 17h às 00h</li>
+                    </ul>
+                </div>
+
+                <form class="formulario-contato">
+                    <div class="form-grupo">
+                        <label for="contato-nome" class="required">Nome</label>
+                        <input type="text" id="contato-nome" name="contato-nome" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="contato-email" class="required">Email</label>
+                        <input type="email" id="contato-email" name="contato-email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="contato-assunto">Assunto</label>
+                        <select id="contato-assunto" name="contato-assunto">
+                            <option value="">Selecione um assunto</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="contato-mensagem" class="required">Mensagem</label>
+                        <textarea id="contato-mensagem" name="contato-mensagem" rows="4" placeholder="Digite sua mensagem..." required></textarea>
+                    </div>
+
+                    <div class="form-grupo">
+                        <button type="submit" class="btn-primary">
+                            <span class="icon">📤</span>
+                            <span class="text">Enviar Mensagem</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Seção sobre -->
+        <section id="sobre" class="sobre-section">
+            <h2>🏪 Sobre Nós</h2>
+            <div class="sobre-content">
+                <p>A Hamburgueria Delícia nasceu da paixão por hambúrgueres artesanais. Nossos ingredientes são selecionados com cuidado e nossos hambúrgueres são feitos na hora, garantindo frescor e qualidade em cada mordida.</p>
+                
+                <h3>Nossos Diferenciais:</h3>
+                <ul class="lista-diferenciais">
+                    <li>🍖 Carne 100% bovina</li>
+                    <li>🥬 Verduras frescas</li>
+                    <li>🧀 Queijos selecionados</li>
+                    <li>🍞 Pães artesanais</li>
+                    <li>⚡ Entrega rápida</li>
+                    <li>💚 Sustentabilidade</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Hamburgueria Delícia. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
