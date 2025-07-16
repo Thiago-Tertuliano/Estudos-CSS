@@ -221,9 +221,9 @@ Este projeto é de uso pessoal e educacional. Todos os direitos reservados.
 
 Para dúvidas ou sugestões sobre os estudos de CSS:
 
-- 📧 Email: [seu-email@exemplo.com]
-- 🐙 GitHub: [seu-usuario]
-- 💼 LinkedIn: [seu-linkedin]
+- 📧 Email: thiagomatostertuliano@gmail.com
+- 🐙 GitHub: https://github.com/Thiago-Tertuliano
+- 💼 LinkedIn: www.linkedin.com/in/thiago-tertuliano
 
 ---
 
