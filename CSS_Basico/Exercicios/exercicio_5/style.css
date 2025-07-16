@@ -1,0 +1,727 @@
+/* ========================================
+   EXERCÍCIO 5 - POSITION E Z-INDEX
+   ======================================== */
+
+/* Reset e configuração base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding-top: 80px; /* Espaço para header fixo */
+}
+
+/* Header Fixo */
+.header-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-fixo h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.header-fixo nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.header-fixo nav a:hover {
+    background-color: #34495e;
+}
+
+/* Conteúdo */
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.secao {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.secao h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* ========================================
+   SEÇÃO 1: RELATIVE
+   ======================================== */
+.demo-relative {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.caixa-original {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 2px solid #2196f3;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.caixa-movida {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    background-color: #fff3e0;
+    padding: 20px;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ========================================
+   SEÇÃO 2: ABSOLUTE
+   ======================================== */
+.container-absolute {
+    position: relative;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    border-radius: 8px;
+}
+
+.elemento-absolute {
+    position: absolute;
+    background-color: #2196f3;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff5722;
+}
+
+/* ========================================
+   SEÇÃO 3: Z-INDEX
+   ======================================== */
+.container-camadas {
+    position: relative;
+    height: 250px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
+
+.camada {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.camada:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.camada-1 {
+    top: 20px;
+    left: 20px;
+    background-color: #4caf50;
+    z-index: 1;
+}
+
+.camada-2 {
+    top: 40px;
+    left: 40px;
+    background-color: #2196f3;
+    z-index: 2;
+}
+
+.camada-3 {
+    top: 60px;
+    left: 60px;
+    background-color: #ff5722;
+    z-index: 3;
+}
+
+/* ========================================
+   SEÇÃO 4: CENTRALIZAÇÃO
+   ======================================== */
+.container-centralizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.centralizado-absolute {
+    position: relative;
+    height: 100px;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+}
+
+.centralizado-absolute::before {
+    content: "Centralizado com Absolute + Transform";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2196f3;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centralizado-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.centralizado-grid {
+    display: grid;
+    place-items: center;
+    height: 100px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ========================================
+   SEÇÃO 5: STICKY
+   ======================================== */
+.nav-sticky {
+    position: sticky;
+    top: 80px; /* Abaixo do header fixo */
+    background-color: #17a2b8;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+
+.conteudo-scroll {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+}
+
+.conteudo-scroll p {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+    border-left: 4px solid #3498db;
+}
+
+/* ========================================
+   SEÇÃO 6: MODAL
+   ======================================== */
+.btn-modal {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-modal:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.btn-fechar {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-fechar:hover {
+    background-color: #c82333;
+}
+
+/* ========================================
+   SEÇÃO 7: TOOLTIP
+   ======================================== */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.tooltip-trigger {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tooltip-trigger:hover {
+    background-color: #0056b3;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+   SEÇÃO 8: CARDS SOBREPOSTOS
+   ======================================== */
+.card-container {
+    position: relative;
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #e9ecef;
+}
+
+.card {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.card-1 {
+    top: 20px;
+    left: 20px;
+    background-color: #2196f3;
+    z-index: 1;
+}
+
+.card-2 {
+    top: 40px;
+    left: 40px;
+    background-color: #4caf50;
+    z-index: 2;
+}
+
+.card-3 {
+    top: 60px;
+    left: 60px;
+    background-color: #ff9800;
+    z-index: 3;
+}
+
+/* ========================================
+   SEÇÃO 9: LOADING SPINNER
+   ======================================== */
+.btn-loading {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-loading:hover {
+    background-color: #5a32a3;
+    transform: translateY(-2px);
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   BOTÃO FLUTUANTE
+   ======================================== */
+.botao-flutuante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.botao-flutuante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+    .header-fixo {
+        padding: 10px 20px;
+    }
+    
+    .header-fixo h1 {
+        font-size: 20px;
+    }
+    
+    .header-fixo nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .conteudo {
+        padding: 10px;
+    }
+    
+    .secao {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .camada {
+        width: 150px;
+        height: 100px;
+        font-size: 14px;
+    }
+    
+    .card {
+        width: 150px;
+        height: 120px;
+        font-size: 14px;
+    }
+    
+    .botao-flutuante {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .tooltip {
+        white-space: normal;
+        width: 200px;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.secao {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.elemento-absolute {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* ========================================
+   ESTILOS ESPECIAIS
+   ======================================== */
+.caixa-original::before {
+    content: "📍";
+    margin-right: 5px;
+}
+
+.caixa-movida::before {
+    content: "🚀";
+    margin-right: 5px;
+}
+
+.camada::before {
+    content: "📦";
+    margin-right: 5px;
+}
+
+.centralizado-flex::before {
+    content: "🎯";
+    margin-right: 5px;
+}
+
+.centralizado-grid::before {
+    content: "🎯";
+    margin-right: 5px;
+}
+
+.nav-sticky::before {
+    content: "📌";
+    margin-right: 5px;
+}
+
+.card::before {
+    content: "💳";
+    margin-right: 5px;
+}
+
+.tooltip-trigger::before {
+    content: "💡";
+    margin-right: 5px;
+}
+
+.btn-loading::before {
+    content: "⏳";
+    margin-right: 5px;
+}
+
+/* ========================================
+   EFEITOS HOVER AVANÇADOS
+   ======================================== */
+.elemento-absolute:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tooltip-trigger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-modal:hover,
+.btn-loading:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   ESTADOS DE FOCUS
+   ======================================== */
+.btn-modal:focus,
+.btn-loading:focus,
+.btn-fechar:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   MELHORIAS DE ACESSIBILIDADE
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   ESTILOS PARA IMPRESSÃO
+   ======================================== */
+@media print {
+    .header-fixo,
+    .botao-flutuante,
+    .modal-overlay,
+    .loading-container {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+} 

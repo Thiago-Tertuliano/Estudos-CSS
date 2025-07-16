@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Position e Z-Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header-fixo">
+        <h1>Position e Z-Index</h1>
+        <nav>
+            <a href="#relative">Relative</a>
+            <a href="#absolute">Absolute</a>
+            <a href="#fixed">Fixed</a>
+            <a href="#sticky">Sticky</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <!-- Seção 1: Relative -->
+        <section id="relative" class="secao">
+            <h2>Position: Relative</h2>
+            <div class="demo-relative">
+                <div class="caixa-original">Posição Original</div>
+                <div class="caixa-movida">Posição Movida (relative)</div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Absolute -->
+        <section id="absolute" class="secao">
+            <h2>Position: Absolute</h2>
+            <div class="container-absolute">
+                <div class="elemento-absolute top-left">Top Left</div>
+                <div class="elemento-absolute top-right">Top Right</div>
+                <div class="elemento-absolute bottom-left">Bottom Left</div>
+                <div class="elemento-absolute bottom-right">Bottom Right</div>
+                <div class="elemento-absolute center">Center</div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Z-Index -->
+        <section class="secao">
+            <h2>Z-Index - Controle de Camadas</h2>
+            <div class="container-camadas">
+                <div class="camada camada-1">Camada 1 (z-index: 1)</div>
+                <div class="camada camada-2">Camada 2 (z-index: 2)</div>
+                <div class="camada camada-3">Camada 3 (z-index: 3)</div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Centralização -->
+        <section class="secao">
+            <h2>Técnicas de Centralização</h2>
+            <div class="container-centralizacao">
+                <div class="centralizado-absolute">Absolute + Transform</div>
+                <div class="centralizado-flex">Flexbox</div>
+                <div class="centralizado-grid">CSS Grid</div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Sticky -->
+        <section id="sticky" class="secao">
+            <h2>Position: Sticky</h2>
+            <div class="nav-sticky">
+                <p>Esta navegação fica sticky no topo!</p>
+            </div>
+            <div class="conteudo-scroll">
+                <p>Conteúdo para scroll...</p>
+                <p>Mais conteúdo...</p>
+                <p>Ainda mais conteúdo...</p>
+                <p>Muito conteúdo para scroll...</p>
+                <p>Conteúdo infinito...</p>
+                <p>Mais um parágrafo...</p>
+                <p>E outro...</p>
+                <p>E mais um...</p>
+                <p>Continua...</p>
+                <p>Finalmente!</p>
+            </div>
+        </section>
+
+        <!-- Seção 6: Modal -->
+        <section class="secao">
+            <h2>Modal com Position Fixed</h2>
+            <button class="btn-modal" onclick="abrirModal()">Abrir Modal</button>
+        </section>
+
+        <!-- Seção 7: Tooltip -->
+        <section class="secao">
+            <h2>Tooltip com Position Absolute</h2>
+            <div class="tooltip-container">
+                <span class="tooltip-trigger">Passe o mouse aqui</span>
+                <div class="tooltip">Este é um tooltip usando position: absolute!</div>
+            </div>
+        </section>
+
+        <!-- Seção 8: Cards Sobrepostos -->
+        <section class="secao">
+            <h2>Cards Sobrepostos com Z-Index</h2>
+            <div class="card-container">
+                <div class="card card-1">Card 1</div>
+                <div class="card card-2">Card 2</div>
+                <div class="card card-3">Card 3</div>
+            </div>
+        </section>
+
+        <!-- Seção 9: Loading Spinner -->
+        <section class="secao">
+            <h2>Loading Spinner Centralizado</h2>
+            <button class="btn-loading" onclick="mostrarLoading()">Mostrar Loading</button>
+            <div id="loading-container" class="loading-container">
+                <div class="spinner"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão Flutuante -->
+    <button class="botao-flutuante" onclick="scrollTopo()">↑</button>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Modal Funcional</h3>
+            <p>Este modal usa position: fixed para cobrir toda a tela.</p>
+            <p>Experimente clicar fora do modal ou no botão fechar!</p>
+            <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function scrollTopo() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function mostrarLoading() {
+            const loading = document.getElementById('loading-container');
+            loading.style.display = 'flex';
+            
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 3000);
+        }
+
+        // Fechar modal clicando fora
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharModal();
+            }
+        });
+    </script>
+</body>
+</html> 
