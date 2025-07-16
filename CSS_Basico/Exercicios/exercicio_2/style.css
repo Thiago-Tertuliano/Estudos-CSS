@@ -1,0 +1,453 @@
+/* ========================================
+   EXERCÍCIO 2 - SELETORES CSS
+   Praticando diferentes tipos de seletores
+   ======================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   ESTILOS GERAIS
+   ======================================== */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 38px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitulo {
+    font-size: 20px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+   ======================================== */
+.conteudo {
+    padding: 40px 30px;
+}
+
+.secao {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+}
+
+.titulo-secao {
+    color: #2c3e50;
+    font-size: 26px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* ========================================
+   SEÇÃO 1: SELETORES POR TAG
+   ======================================== */
+/* Seletor por tag - afeta todos os parágrafos */
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Seletor para elementos code */
+code {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+/* ========================================
+   SEÇÃO 2: SELETORES POR CLASSE
+   ======================================== */
+/* Seletor por classe - elementos com class="destaque" */
+.destaque {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Seletor por classe - elementos com class="importante" */
+.importante {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Elemento com múltiplas classes */
+.destaque.importante {
+    background: linear-gradient(135deg, #fff3cd 0%, #d4edda 100%);
+    color: #856404;
+    border-left: 4px solid #ffc107;
+    font-weight: 700;
+}
+
+/* ========================================
+   SEÇÃO 3: SELETORES POR ID
+   ======================================== */
+/* Seletor por ID - elemento único */
+#unico {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #2196f3;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#especial {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #9c27b0;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   SEÇÃO 4: SELETORES COMBINADOS
+   ======================================== */
+/* Cards básicos */
+.card {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: #3498db;
+}
+
+/* Títulos dentro de cards */
+.card h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+/* Parágrafos dentro de cards */
+.card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Spans dentro de cards */
+.card span {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Card especial com classe adicional */
+.card.especial {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.card.especial h3 {
+    color: white;
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.card.especial p {
+    color: rgba(255,255,255,0.9);
+}
+
+.card.especial span {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ========================================
+   SEÇÃO 5: LISTA DE TAREFAS
+   ======================================== */
+.lista-tarefas {
+    list-style: none;
+    padding: 0;
+}
+
+.tarefa {
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 50px;
+}
+
+.tarefa::before {
+    content: "☐";
+    position: absolute;
+    left: 20px;
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.tarefa:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateX(5px);
+}
+
+/* Tarefa completada */
+.tarefa.completada {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.tarefa.completada::before {
+    content: "☑";
+    color: #28a745;
+}
+
+/* ========================================
+   SEÇÃO 6: FORMULÁRIO AVANÇADO
+   ======================================== */
+.formulario-avancado {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Inputs e textareas */
+.grupo-campo input[type="text"],
+.grupo-campo input[type="email"],
+.grupo-campo input[type="number"],
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Estados dos inputs */
+.grupo-campo input:valid {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+.grupo-campo input:invalid {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+/* Checkbox personalizado */
+.grupo-campo input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-enviar, .btn-limpar {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+.btn-limpar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-limpar:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.texto-footer {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    .header {
+        padding: 40px 20px;
+    }
+    
+    .titulo-principal {
+        font-size: 28px;
+    }
+    
+    .conteudo {
+        padding: 30px 20px;
+    }
+    
+    .secao {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .botoes {
+        flex-direction: column;
+    }
+    
+    .btn-enviar, .btn-limpar {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.secao {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* ========================================
+   ESTILOS ESPECIAIS
+   ======================================== */
+/* Destaque para elementos importantes */
+.importante::after {
+    content: " ⭐";
+    font-size: 16px;
+}
+
+/* Efeito de destaque no hover */
+.destaque:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+/* Estilo para elementos com foco */
+*:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+} 

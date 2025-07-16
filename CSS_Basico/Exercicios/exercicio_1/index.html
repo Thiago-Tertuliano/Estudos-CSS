@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - CSS Básico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="titulo-principal">Meu Primeiro Projeto CSS</h1>
+            <p class="subtitulo">Aplicando os conceitos da Aula 1</p>
+        </header>
+
+        <main class="conteudo">
+            <section class="secao">
+                <h2 class="titulo-secao">Sobre CSS</h2>
+                <p class="texto-destaque">
+                    CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar páginas web.
+                    Ela controla cores, fontes, layout e muito mais!
+                </p>
+                <p class="texto-normal">
+                    Neste exercício, você vai praticar os conceitos básicos de CSS: seletores, 
+                    propriedades, classes e IDs. Experimente modificar os estilos para ver as mudanças!
+                </p>
+            </section>
+
+            <section class="secao">
+                <h2 class="titulo-secao">Tipos de Seletores</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3 class="card-titulo">Seletor por Tag</h3>
+                        <p class="card-texto">Seleciona todos os elementos com a mesma tag HTML.</p>
+                        <code class="codigo">h1 { color: blue; }</code>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-titulo">Seletor por Classe</h3>
+                        <p class="card-texto">Seleciona elementos com uma classe específica.</p>
+                        <code class="codigo">.destaque { background: yellow; }</code>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-titulo">Seletor por ID</h3>
+                        <p class="card-texto">Seleciona um elemento único com ID específico.</p>
+                        <code class="codigo">#especial { font-size: 20px; }</code>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao">
+                <h2 class="titulo-secao">Formulário de Contato</h2>
+                <form class="formulario">
+                    <div class="grupo-campo">
+                        <label for="nome" class="label">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="input" placeholder="Digite seu nome">
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="email" class="label">Email:</label>
+                        <input type="email" id="email" name="email" class="input" placeholder="Digite seu email">
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="mensagem" class="label">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" class="textarea" placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    
+                    <div class="botoes">
+                        <button type="submit" class="btn-primario">Enviar</button>
+                        <button type="reset" class="btn-secundario">Limpar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="texto-footer">Exercício criado para praticar CSS Básico - Aula 1</p>
+        </footer>
+    </div>
+</body>
+</html> 
