@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo">Flexbox Demo</div>
+        <ul class="nav-links">
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#form">Formulário</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+        </ul>
+        <div class="user-actions">
+            <button class="btn-login">Login</button>
+            <button class="btn-signup">Cadastro</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Seção 1: Demonstração Flexbox -->
+        <section class="section">
+            <h2>Demonstração Flexbox</h2>
+            <div class="flex-demo">
+                <div class="demo-container">
+                    <h3>justify-content: center</h3>
+                    <div class="container justify-center">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                    </div>
+                </div>
+                
+                <div class="demo-container">
+                    <h3>justify-content: space-between</h3>
+                    <div class="container justify-between">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                    </div>
+                </div>
+                
+                <div class="demo-container">
+                    <h3>align-items: center</h3>
+                    <div class="container align-center">
+                        <div class="item tall">Alto</div>
+                        <div class="item">Normal</div>
+                        <div class="item short">Baixo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Cards Responsivos -->
+        <section id="cards" class="section">
+            <h2>Cards Responsivos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>Este é um card usando flexbox. Ele se adapta automaticamente ao tamanho da tela.</p>
+                    <button class="card-btn">Saiba Mais</button>
+                </div>
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>Outro card demonstrando o poder do flexbox para layouts responsivos.</p>
+                    <button class="card-btn">Saiba Mais</button>
+                </div>
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p>Mais um card para mostrar como flexbox facilita a criação de layouts.</p>
+                    <button class="card-btn">Saiba Mais</button>
+                </div>
+                <div class="card">
+                    <h3>Card 4</h3>
+                    <p>Este card demonstra como flex-wrap funciona automaticamente.</p>
+                    <button class="card-btn">Saiba Mais</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Formulário Centralizado -->
+        <section id="form" class="section">
+            <h2>Formulário Centralizado</h2>
+            <div class="form-container">
+                <form class="contact-form">
+                    <h3>Entre em Contato</h3>
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Enviar</button>
+                        <button type="reset" class="btn-reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Seção 4: Galeria Flexível -->
+        <section id="gallery" class="section">
+            <h2>Galeria Flexível</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Imagem+1" alt="Imagem 1">
+                    <h4>Imagem 1</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Imagem+2" alt="Imagem 2">
+                    <h4>Imagem 2</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Imagem+3" alt="Imagem 3">
+                    <h4>Imagem 3</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Imagem+4" alt="Imagem 4">
+                    <h4>Imagem 4</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Imagem+5" alt="Imagem 5">
+                    <h4>Imagem 5</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/1abc9c/ffffff?text=Imagem+6" alt="Imagem 6">
+                    <h4>Imagem 6</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Flex Properties -->
+        <section class="section">
+            <h2>Propriedades Flex</h2>
+            <div class="flex-properties">
+                <div class="flex-demo">
+                    <h3>flex: 1 (cresce igualmente)</h3>
+                    <div class="container-flex">
+                        <div class="item-flex flex-1">Flex 1</div>
+                        <div class="item-flex flex-1">Flex 1</div>
+                        <div class="item-flex flex-1">Flex 1</div>
+                    </div>
+                </div>
+                
+                <div class="flex-demo">
+                    <h3>flex: 2 (cresce 2x mais)</h3>
+                    <div class="container-flex">
+                        <div class="item-flex flex-1">Flex 1</div>
+                        <div class="item-flex flex-2">Flex 2</div>
+                        <div class="item-flex flex-1">Flex 1</div>
+                    </div>
+                </div>
+                
+                <div class="flex-demo">
+                    <h3>flex: 3 (cresce 3x mais)</h3>
+                    <div class="container-flex">
+                        <div class="item-flex flex-1">Flex 1</div>
+                        <div class="item-flex flex-2">Flex 2</div>
+                        <div class="item-flex flex-3">Flex 3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Flex Direction -->
+        <section class="section">
+            <h2>Flex Direction</h2>
+            <div class="flex-direction-demo">
+                <div class="direction-container">
+                    <h3>flex-direction: row (padrão)</h3>
+                    <div class="container-direction row">
+                        <div class="item-direction">Item 1</div>
+                        <div class="item-direction">Item 2</div>
+                        <div class="item-direction">Item 3</div>
+                    </div>
+                </div>
+                
+                <div class="direction-container">
+                    <h3>flex-direction: column</h3>
+                    <div class="container-direction column">
+                        <div class="item-direction">Item 1</div>
+                        <div class="item-direction">Item 2</div>
+                        <div class="item-direction">Item 3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 7: Align Self -->
+        <section class="section">
+            <h2>Align Self</h2>
+            <div class="align-self-demo">
+                <div class="container-align-self">
+                    <div class="item-align-self align-start">Flex Start</div>
+                    <div class="item-align-self align-center">Center</div>
+                    <div class="item-align-self align-end">Flex End</div>
+                    <div class="item-align-self align-stretch">Stretch</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Exercício 6 - Flexbox Layouts</p>
+    </footer>
+</body>
+</html> 
