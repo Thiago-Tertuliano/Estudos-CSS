@@ -370,7 +370,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
@@ -392,7 +392,7 @@ html {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 1rem;
-    line-height: 1.6;
+  line-height: 1.6;
     color: #333;
     font-weight: 400;
 }
@@ -400,7 +400,7 @@ body {
 /* Hierarquia de títulos */
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+  font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -584,7 +584,7 @@ body {
 .container {
     max-width: 1200px;
     width: 90%;
-    margin: 0 auto;
+  margin: 0 auto;
     padding: 0 1rem;
 }
 
@@ -593,7 +593,7 @@ body {
     background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
     color: white;
     padding: 4rem 0;
-    text-align: center;
+  text-align: center;
 }
 
 .titulo-principal {

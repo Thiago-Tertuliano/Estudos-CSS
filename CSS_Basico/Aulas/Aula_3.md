@@ -71,7 +71,7 @@ p {
 ```css
 /* Borda simples */
 .elemento {
-    border: 2px solid #0066cc;
+  border: 2px solid #0066cc;
 }
 
 /* Bordas específicas */
@@ -213,7 +213,7 @@ border-radius: 50px 25px;
 ```css
 .elemento {
     width: 200px;
-    padding: 20px;
+  padding: 20px;
     border: 2px solid #333;
     /* Largura total = 200px + 40px (padding) + 4px (border) = 244px */
 }
@@ -223,7 +223,7 @@ border-radius: 50px 25px;
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .elemento {

@@ -103,7 +103,7 @@
 #### **CSS:**
 ```css
 .inline-block-element {
-    display: inline-block;
+  display: inline-block;
     width: 200px;
     height: 50px;
     margin: 10px;
@@ -127,7 +127,7 @@
 #### **CSS:**
 ```css
 .hidden-element {
-    display: none;
+  display: none;
     /* Elemento completamente invisível */
 }
 ```
@@ -157,26 +157,26 @@
 
 ```css
 .inline {
-    display: inline;
-    background: yellow;
+  display: inline;
+  background: yellow;
     padding: 5px;
     margin: 0 10px;
     /* width e height não funcionam */
 }
 
 .inline-block {
-    display: inline-block;
-    background: lightblue;
+  display: inline-block;
+  background: lightblue;
     padding: 10px;
-    margin: 0 10px;
+  margin: 0 10px;
     width: 150px;
     height: 30px;
     vertical-align: middle;
 }
 
 .block {
-    display: block;
-    background: lightgreen;
+  display: block;
+  background: lightgreen;
     padding: 15px;
     margin: 10px 0;
     width: 300px;
@@ -386,7 +386,7 @@
 
 ```css
 .hidden {
-    display: none;
+  display: none;
 }
 
 .visible {
