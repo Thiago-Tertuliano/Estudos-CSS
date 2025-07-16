@@ -1,0 +1,749 @@
+/* ========================================
+   EXERCÍCIO 3 - BOX MODEL
+   Aplicando margin, padding, border e content
+   ======================================== */
+
+/* Reset e configuração base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitulo {
+    font-size: 18px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Conteúdo */
+.conteudo {
+    padding: 40px 30px;
+}
+
+.secao {
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+}
+
+.titulo-secao {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* ========================================
+   SEÇÃO 1: DEMONSTRAÇÃO VISUAL DO BOX MODEL
+   ======================================== */
+.box-model-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.margin {
+    background-color: #ffebee;
+    padding: 30px;
+    border: 2px dashed #f44336;
+    position: relative;
+}
+
+.border {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 3px solid #2196f3;
+    position: relative;
+}
+
+.padding {
+    background-color: #f3e5f5;
+    padding: 15px;
+    border: 2px solid #9c27b0;
+    position: relative;
+}
+
+.content {
+    background-color: #e8f5e8;
+    padding: 20px;
+    border: 2px solid #4caf50;
+    text-align: center;
+    min-width: 200px;
+}
+
+.label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.content .label {
+    position: static;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #4caf50;
+}
+
+/* ========================================
+   SEÇÃO 2: PADDING EXAMPLES
+   ======================================== */
+.padding-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.exemplo-padding {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.exemplo-padding:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.exemplo-padding h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.exemplo-padding p {
+    color: #666;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.padding-todos {
+    padding: 20px;
+}
+
+.padding-vertical {
+    padding: 20px 0;
+}
+
+.padding-especifico {
+    padding: 10px 20px 15px 5px;
+}
+
+.padding-zero {
+    padding: 0;
+}
+
+/* ========================================
+   SEÇÃO 3: MARGIN EXAMPLES
+   ======================================== */
+.margin-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.exemplo-margin {
+    background-color: #e8f4fd;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.exemplo-margin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.exemplo-margin h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.exemplo-margin p {
+    color: #666;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.margin-auto {
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.margin-negativo {
+    margin: -10px;
+    background-color: #ffebee;
+    border-color: #f44336;
+}
+
+.margin-diferentes {
+    margin: 10px 20px 30px 40px;
+    background-color: #fff3e0;
+    border-color: #ff9800;
+}
+
+/* ========================================
+   SEÇÃO 4: BORDER EXAMPLES
+   ======================================== */
+.border-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.exemplo-border {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.exemplo-border:hover {
+    transform: scale(1.05);
+}
+
+.exemplo-border h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.exemplo-border p {
+    color: #666;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.border-solid {
+    border: 3px solid #3498db;
+}
+
+.border-dashed {
+    border: 3px dashed #e74c3c;
+}
+
+.border-dotted {
+    border: 3px dotted #f39c12;
+}
+
+.border-double {
+    border: 6px double #9b59b6;
+}
+
+.border-inset {
+    border: 3px inset #34495e;
+}
+
+.border-outset {
+    border: 3px outset #27ae60;
+}
+
+/* ========================================
+   SEÇÃO 5: BORDER RADIUS
+   ======================================== */
+.radius-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.exemplo-radius {
+    background-color: #3498db;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.exemplo-radius:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+.exemplo-radius h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.exemplo-radius p {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.radius-quadrado {
+    border-radius: 0;
+}
+
+.radius-pequeno {
+    border-radius: 5px;
+}
+
+.radius-medio {
+    border-radius: 15px;
+}
+
+.radius-grande {
+    border-radius: 25px;
+}
+
+.radius-circular {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================
+   SEÇÃO 6: BOX-SIZING COMPARISON
+   ======================================== */
+.box-sizing-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.comparison-item h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.box {
+    background-color: #e8f4fd;
+    border: 2px solid #3498db;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box p {
+    color: #666;
+    margin-bottom: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.content-box-demo {
+    box-sizing: content-box;
+    width: 200px;
+}
+
+.border-box-demo {
+    box-sizing: border-box;
+    width: 200px;
+}
+
+/* ========================================
+   SEÇÃO 7: MARGIN COLLAPSE
+   ======================================== */
+.margin-collapse-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.collapse-item {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 15px;
+    text-align: center;
+}
+
+.collapse-item h3 {
+    color: #856404;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.collapse-item p {
+    color: #856404;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.collapse-item:first-child {
+    margin-bottom: 30px;
+}
+
+.collapse-item:nth-child(2) {
+    margin-top: 20px;
+}
+
+.sem-collapse {
+    background-color: #d4edda;
+    border-color: #28a745;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.sem-collapse h3 {
+    color: #155724;
+}
+
+.sem-collapse p {
+    color: #155724;
+}
+
+/* ========================================
+   SEÇÃO 8: CARDS PRACTICE
+   ======================================== */
+.cards-practice {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.card-simples {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.card-destaque {
+    padding: 25px;
+    margin: 20px;
+    border: 3px solid #3498db;
+}
+
+.card-arredondado {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-sem-margin {
+    padding: 15px;
+    margin: 0;
+    border: 1px dotted #e74c3c;
+}
+
+/* ========================================
+   SEÇÃO 9: FORMULÁRIO BOX MODEL
+   ======================================== */
+.formulario-box-model {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.botoes-formulario {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-enviar,
+.btn-limpar {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+.btn-limpar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-limpar:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 5px;
+    }
+    
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .titulo-principal {
+        font-size: 28px;
+    }
+    
+    .conteudo {
+        padding: 30px 20px;
+    }
+    
+    .secao {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .box-model-demo {
+        padding: 20px;
+    }
+    
+    .margin {
+        padding: 20px;
+    }
+    
+    .border {
+        padding: 15px;
+    }
+    
+    .padding {
+        padding: 10px;
+    }
+    
+    .content {
+        padding: 15px;
+        min-width: 150px;
+    }
+    
+    .box-sizing-comparison {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .botoes-formulario {
+        flex-direction: column;
+    }
+    
+    .btn-enviar,
+    .btn-limpar {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.secao {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ========================================
+   ESTILOS ESPECIAIS
+   ======================================== */
+.exemplo-padding::before {
+    content: "📦";
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.exemplo-margin::before {
+    content: "↔️";
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.exemplo-border::before {
+    content: "🔲";
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.exemplo-radius::before {
+    content: "⭕";
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card::before {
+    content: "💳";
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   ESTADOS ESPECIAIS
+   ======================================== */
+.exemplo-padding:hover::before,
+.exemplo-margin:hover::before,
+.exemplo-border:hover::before,
+.exemplo-radius:hover::before,
+.card:hover::before {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* ========================================
+   UTILITÁRIOS
+   ======================================== */
+.texto-centro {
+    text-align: center;
+}
+
+.margem-superior {
+    margin-top: 20px;
+}
+
+.margem-inferior {
+    margin-bottom: 20px;
+}
+
+.padding-lateral {
+    padding-left: 20px;
+    padding-right: 20px;
+} 

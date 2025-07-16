@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="titulo-principal">Praticando Box Model</h1>
+            <p class="subtitulo">Margin, Padding, Border e Content em ação</p>
+        </header>
+
+        <main class="conteudo">
+            <!-- Seção 1: Demonstração Visual do Box Model -->
+            <section class="secao">
+                <h2 class="titulo-secao">Visualizando o Box Model</h2>
+                <div class="box-model-demo">
+                    <div class="margin">
+                        <span class="label">MARGIN</span>
+                        <div class="border">
+                            <span class="label">BORDER</span>
+                            <div class="padding">
+                                <span class="label">PADDING</span>
+                                <div class="content">
+                                    <span class="label">CONTENT</span>
+                                    <p>Este é o conteúdo real do elemento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 2: Experimentando Padding -->
+            <section class="secao">
+                <h2 class="titulo-secao">Diferentes Tipos de Padding</h2>
+                <div class="padding-examples">
+                    <div class="exemplo-padding padding-todos">
+                        <h3>Padding em Todos os Lados</h3>
+                        <p>padding: 20px;</p>
+                    </div>
+                    
+                    <div class="exemplo-padding padding-vertical">
+                        <h3>Padding Vertical</h3>
+                        <p>padding: 20px 0;</p>
+                    </div>
+                    
+                    <div class="exemplo-padding padding-especifico">
+                        <h3>Padding Específico</h3>
+                        <p>padding: 10px 20px 15px 5px;</p>
+                    </div>
+                    
+                    <div class="exemplo-padding padding-zero">
+                        <h3>Sem Padding</h3>
+                        <p>padding: 0;</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 3: Experimentando Margin -->
+            <section class="secao">
+                <h2 class="titulo-secao">Diferentes Tipos de Margin</h2>
+                <div class="margin-examples">
+                    <div class="exemplo-margin margin-auto">
+                        <h3>Margin Auto (Centralizado)</h3>
+                        <p>margin: 0 auto;</p>
+                    </div>
+                    
+                    <div class="exemplo-margin margin-negativo">
+                        <h3>Margin Negativo</h3>
+                        <p>margin: -10px;</p>
+                    </div>
+                    
+                    <div class="exemplo-margin margin-diferentes">
+                        <h3>Margins Diferentes</h3>
+                        <p>margin: 10px 20px 30px 40px;</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 4: Tipos de Border -->
+            <section class="secao">
+                <h2 class="titulo-secao">Estilos de Border</h2>
+                <div class="border-examples">
+                    <div class="exemplo-border border-solid">
+                        <h3>Solid</h3>
+                        <p>border: 3px solid #3498db;</p>
+                    </div>
+                    
+                    <div class="exemplo-border border-dashed">
+                        <h3>Dashed</h3>
+                        <p>border: 3px dashed #e74c3c;</p>
+                    </div>
+                    
+                    <div class="exemplo-border border-dotted">
+                        <h3>Dotted</h3>
+                        <p>border: 3px dotted #f39c12;</p>
+                    </div>
+                    
+                    <div class="exemplo-border border-double">
+                        <h3>Double</h3>
+                        <p>border: 6px double #9b59b6;</p>
+                    </div>
+                    
+                    <div class="exemplo-border border-inset">
+                        <h3>Inset</h3>
+                        <p>border: 3px inset #34495e;</p>
+                    </div>
+                    
+                    <div class="exemplo-border border-outset">
+                        <h3>Outset</h3>
+                        <p>border: 3px outset #27ae60;</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 5: Border Radius -->
+            <section class="secao">
+                <h2 class="titulo-secao">Border Radius</h2>
+                <div class="radius-examples">
+                    <div class="exemplo-radius radius-quadrado">
+                        <h3>Sem Radius</h3>
+                        <p>border-radius: 0;</p>
+                    </div>
+                    
+                    <div class="exemplo-radius radius-pequeno">
+                        <h3>Pequeno</h3>
+                        <p>border-radius: 5px;</p>
+                    </div>
+                    
+                    <div class="exemplo-radius radius-medio">
+                        <h3>Médio</h3>
+                        <p>border-radius: 15px;</p>
+                    </div>
+                    
+                    <div class="exemplo-radius radius-grande">
+                        <h3>Grande</h3>
+                        <p>border-radius: 25px;</p>
+                    </div>
+                    
+                    <div class="exemplo-radius radius-circular">
+                        <h3>Circular</h3>
+                        <p>border-radius: 50%;</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 6: Box-Sizing Comparação -->
+            <section class="secao">
+                <h2 class="titulo-secao">Box-Sizing: Content-Box vs Border-Box</h2>
+                <div class="box-sizing-comparison">
+                    <div class="comparison-item">
+                        <h3>Content-Box (Padrão)</h3>
+                        <div class="box content-box-demo">
+                            <p>Width: 200px</p>
+                            <p>Padding: 20px</p>
+                            <p>Border: 2px</p>
+                            <p><strong>Total: 244px</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item">
+                        <h3>Border-Box</h3>
+                        <div class="box border-box-demo">
+                            <p>Width: 200px</p>
+                            <p>Padding: 20px</p>
+                            <p>Border: 2px</p>
+                            <p><strong>Total: 200px</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 7: Margin Collapse -->
+            <section class="secao">
+                <h2 class="titulo-secao">Margin Collapse</h2>
+                <div class="margin-collapse-demo">
+                    <div class="collapse-item">
+                        <h3>Elemento 1</h3>
+                        <p>margin-bottom: 30px</p>
+                    </div>
+                    
+                    <div class="collapse-item">
+                        <h3>Elemento 2</h3>
+                        <p>margin-top: 20px</p>
+                        <p><strong>Resultado: apenas 30px de espaço</strong></p>
+                    </div>
+                    
+                    <div class="collapse-item sem-collapse">
+                        <h3>Elemento 3 (Sem Collapse)</h3>
+                        <p>Com padding para evitar collapse</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 8: Cards Práticos -->
+            <section class="secao">
+                <h2 class="titulo-secao">Cards com Box Model</h2>
+                <div class="cards-practice">
+                    <div class="card card-simples">
+                        <h3>Card Simples</h3>
+                        <p>Padding: 15px<br>Margin: 10px<br>Border: 1px solid</p>
+                    </div>
+                    
+                    <div class="card card-destaque">
+                        <h3>Card Destaque</h3>
+                        <p>Padding: 25px<br>Margin: 20px<br>Border: 3px solid</p>
+                    </div>
+                    
+                    <div class="card card-arredondado">
+                        <h3>Card Arredondado</h3>
+                        <p>Padding: 20px<br>Border-radius: 15px<br>Box-shadow</p>
+                    </div>
+                    
+                    <div class="card card-sem-margin">
+                        <h3>Sem Margin</h3>
+                        <p>Padding: 15px<br>Margin: 0<br>Borda pontilhada</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 9: Formulário com Box Model -->
+            <section class="secao">
+                <h2 class="titulo-secao">Formulário Aplicando Box Model</h2>
+                <form class="formulario-box-model">
+                    <div class="grupo-campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    
+                    <div class="botoes-formulario">
+                        <button type="submit" class="btn-enviar">Enviar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Exercício 3 - Box Model Completo</p>
+        </footer>
+    </div>
+</body>
+</html> 
