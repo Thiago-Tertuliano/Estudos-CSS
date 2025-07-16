@@ -287,9 +287,9 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 ## 📞 Contato
 
-- 📧 Email: [seu-email@exemplo.com]
-- 🌐 Website: [seu-site.com]
-- 💼 LinkedIn: [seu-linkedin]
+- 📧 Email: thiagomatostertuliano@gmail.com
+- 🌐 Website: https://github.com/Thiago-Tertuliano
+- 💼 LinkedIn: https://www.linkedin.com/in/thiago-tertuliano/
 
 ---
 
