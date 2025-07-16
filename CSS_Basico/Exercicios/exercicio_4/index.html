@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - Display Properties</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="titulo-principal">Display Properties</h1>
+            <p class="subtitulo">inline, block, inline-block e none</p>
+        </header>
+
+        <main class="conteudo">
+            <!-- Seção 1: Comparação Visual -->
+            <section class="secao">
+                <h2 class="titulo-secao">Comparação Visual</h2>
+                <div class="comparacao">
+                    <p class="texto-exemplo">
+                        Este é um parágrafo com elementos 
+                        <span class="inline-demo">inline</span>, 
+                        <span class="inline-block-demo">inline-block</span> e 
+                        <div class="block-demo">block</div>
+                        para demonstrar as diferenças.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Seção 2: Botões com Inline-Block -->
+            <section class="secao">
+                <h2 class="titulo-secao">Botões com Inline-Block</h2>
+                <div class="botoes-container">
+                    <button class="btn btn-primario">Botão Primário</button>
+                    <button class="btn btn-secundario">Botão Secundário</button>
+                    <button class="btn btn-sucesso">Botão Sucesso</button>
+                    <button class="btn btn-perigo">Botão Perigo</button>
+                </div>
+            </section>
+
+            <!-- Seção 3: Navegação Horizontal -->
+            <section class="secao">
+                <h2 class="titulo-secao">Navegação Horizontal</h2>
+                <nav class="nav-horizontal">
+                    <a href="#" class="nav-item">Início</a>
+                    <a href="#" class="nav-item">Sobre</a>
+                    <a href="#" class="nav-item">Serviços</a>
+                    <a href="#" class="nav-item">Contato</a>
+                </nav>
+            </section>
+
+            <!-- Seção 4: Cards em Linha -->
+            <section class="secao">
+                <h2 class="titulo-secao">Cards em Linha</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>Este é um card usando inline-block.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 2</h3>
+                        <p>Outro card com inline-block.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 3</h3>
+                        <p>Mais um card para demonstrar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 5: Alinhamento Vertical -->
+            <section class="secao">
+                <h2 class="titulo-secao">Alinhamento Vertical</h2>
+                <div class="alinhamento-container">
+                    <div class="alinhamento-item align-top">
+                        <h3>Top</h3>
+                        <p>vertical-align: top</p>
+                    </div>
+                    <div class="alinhamento-item align-middle">
+                        <h3>Middle</h3>
+                        <p>vertical-align: middle</p>
+                    </div>
+                    <div class="alinhamento-item align-bottom">
+                        <h3>Bottom</h3>
+                        <p>vertical-align: bottom</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 6: Show/Hide -->
+            <section class="secao">
+                <h2 class="titulo-secao">Mostrar/Ocultar Elementos</h2>
+                <div class="show-hide-container">
+                    <button class="btn-toggle" onclick="toggleElement()">
+                        Mostrar/Ocultar Conteúdo
+                    </button>
+                    <div id="conteudo-dinamico" class="conteudo-oculto">
+                        <h3>Conteúdo Dinâmico</h3>
+                        <p>Este conteúdo pode ser mostrado ou ocultado usando JavaScript e display: none/block.</p>
+                        <p>Experimente clicar no botão acima para ver a funcionalidade em ação!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 7: Formulário com Inline-Block -->
+            <section class="secao">
+                <h2 class="titulo-secao">Formulário com Inline-Block</h2>
+                <form class="formulario-inline">
+                    <div class="form-grupo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    
+                    <div class="form-botoes">
+                        <button type="submit" class="btn-enviar">Enviar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Seção 8: Galeria de Imagens -->
+            <section class="secao">
+                <h2 class="titulo-secao">Galeria com Inline-Block</h2>
+                <div class="galeria">
+                    <div class="galeria-item">
+                        <img src="https://via.placeholder.com/200x150/3498db/ffffff?text=Imagem+1" alt="Imagem 1">
+                        <p>Imagem 1</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="https://via.placeholder.com/200x150/e74c3c/ffffff?text=Imagem+2" alt="Imagem 2">
+                        <p>Imagem 2</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="https://via.placeholder.com/200x150/2ecc71/ffffff?text=Imagem+3" alt="Imagem 3">
+                        <p>Imagem 3</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="https://via.placeholder.com/200x150/f39c12/ffffff?text=Imagem+4" alt="Imagem 4">
+                        <p>Imagem 4</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Exercício 4 - Display Properties</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleElement() {
+            const elemento = document.getElementById('conteudo-dinamico');
+            elemento.classList.toggle('conteudo-oculto');
+        }
+    </script>
+</body>
+</html> 
